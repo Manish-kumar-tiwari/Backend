@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Project-1</title>
+  </head>
+  <body>
+    <div class="w-screen h-screen bg-zinc-800 py-5">
+      <a class="text-xl text-blue-500 px-5 ml-5 inline" href="/"
+        >Go back to Home page</a
+      >
+
+      <div class="w-[80%] px-5 mt-5">
+        <form action="/update" method="post">
+          <input
+            class="block w-1/4 bg-zinc-600 text-zinc-400 px-5 py-2 outline-none rounded-md ml-5"
+            type="text"
+            placeholder="Title of the content..."
+            name="previous"
+            value="<%=filename%>"
+          />
+          <input
+            class="block w-1/4 bg-zinc-600 text-white px-5 py-2 mt-3 outline-none rounded-md ml-5"
+            type="text"
+            placeholder="New name"
+            name="new"
+          />
+          <input
+            class="ml-5 py-2 bg-yellow-400 px-5 rounded-md mt-3 cursor-pointer"
+            type="submit"
+            value="Update"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

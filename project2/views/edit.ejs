@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project-2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="w-screen bg-zinc-900 h-screen">
+      <div class="py-10">
+        <a class="text-blue-500 ml-5 text-xl" href="/users">Back</a>
+      </div>
+      <h1 class="text-4xl py-6 px-5 text-white">Update User</h1>
+      <div class="flex py-6 ml-4">
+        <form action="/update" method="post">
+          <input
+            class="py-2 px-5 text-white bg-zinc-700 border-2 border-xinc-500 rounded-md outline-none"
+            type="text"
+            placeholder="Name"
+            name="name"
+            value="<%= user.name %>"
+          />
+          <input
+            class="py-2 px-5 text-white bg-zinc-700 outline-none border-2 rounded-md border-xinc-500"
+            type="text"
+            placeholder="Email"
+            name="email"
+            value="<%= user.email %>"
+          />
+          <input
+            class="py-2 px-5 text-white bg-zinc-700 outline-none border-2 rounded-md border-xinc-500"
+            type="text"
+            placeholder="Image Url"
+            name="image"
+            value="<%= user.image %>"
+          />
+
+          <input
+            class="py-3 text-lg px-7 bg-yellow-500 text-white rounded-md ml-4"
+            type="submit"
+            placeholder="Update User"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

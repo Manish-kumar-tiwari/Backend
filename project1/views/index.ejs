@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Project-1</title>
+  </head>
+  <body>
+    <div class="w-screen h-screen bg-zinc-800 py-5 flex justify-around">
+      <div>
+        <div class="w-[80%] px-5">
+          <form action="/create" method="post">
+            <input
+              class="block w-full bg-zinc-600 text-white px-5 py-2 outline-none rounded-md ml-5"
+              type="text"
+              placeholder="Title of the content..."
+              name="title"
+            />
+            <textarea
+              class="block w-full text-white bg-zinc-600 resize-none px-5 ml-5 py-2 px-5 outline-none rounded-md mt-3"
+              name="details"
+              placeholder="Description.............."
+            ></textarea>
+            <input
+              class="ml-5 py-2 bg-blue-400 px-5 rounded-md my-2 cursor-pointer"
+              type="submit"
+              value="Add Content"
+            />
+          </form>
+        </div>
+
+        <div class="mt-3 flex flex-wrap gap-3 px-2 ml-7 w-[80%] justify-center">
+          <% if(files.length!=0){ %> <% files.forEach(function(file){%>
+          <div class="bg-zinc-600 min-w-72 rounded-md px-4">
+            <h1 class="px-4 py-2 text-white text-3xl"><%= file %></h1>
+            <div class="flex justify-between px-4 py-2">
+              <a href="/files/<%= file %>" class="text-blue-500">seen more</a>
+              <a class="text-zinc-800" href="/edit/<%=file %>">edit filename</a>
+            </div>
+          </div>
+          <% })%> <% }%>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
